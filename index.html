@@ -44,7 +44,15 @@
           if (this.readyState == 4 && this.status == 200) {
             //typical action to be performed when the document
             // document.getElementById('demo').innerHTML = xhttp.responseText;
-            var response = xhttp.responseText;
+            var response = JSON.parse(xhttp.responseText);
+            var people = response.people;
+
+            var output = '';
+           for(var i = 0; i < people.length; i++){
+             // console.log(people[i].age);
+             output += '<li>' + people[i].name + '</li>'
+           }
+           document.getElementById('people').innerHTML = output;
           }
         };
 
