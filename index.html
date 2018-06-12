@@ -2,10 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Working with JSON</title>
   </head>
   <body>
-
+<ul id= "people"></ul>
      <script>
         var person = {
           name: "Fitsum",
@@ -31,10 +31,12 @@
         ]
         // console.log(person.children[0]);
         // console.log(people[1].name);
-
+         var output = '';
         for(var i = 0; i < people.length; i++){
-          console.log(people[i].age);
+          // console.log(people[i].age);
+          output += '<li>' + people[i].name + '</li>'
         }
+        document.getElementById('people').innerHTML = output;
      </script>
   </body>
 </html>
