@@ -9,11 +9,16 @@
      <script>
         var person = {
           name: "Fitsum",
-          age: 35
+          age: 35,
+          address: {
+            street: "5 main st",
+            city: "Boston"
+          },
+          children: ["Briana", "Nicholas"]
         }
-
-        person = JSON.stringify(person);
-        console.log(person);
+        // person = JSON.stringify(person);
+        // person = JSON.parse(person);
+        console.log(person.children[0]);
      </script>
   </body>
 </html>
